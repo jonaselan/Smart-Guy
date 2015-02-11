@@ -10,7 +10,7 @@ class SmartGuy < Gosu::Window
     super(640, 480, false)
     self.caption = "Smart Guy"
     #plano de fundo do jogo
-    @sky = Gosu::Image.new(self, "Space.gif", true)
+    @sky = Gosu::Image.new(self, "fundo.png", true)
     #plano de fundo da tela inicial e pause
     @fundoMenus = Gosu::Image.new(self, "Space.png", true)
     #carregando o mapa
@@ -18,7 +18,7 @@ class SmartGuy < Gosu::Window
     #carregando a trilha sonora do jogo
     @trilha = Gosu::Song.new(self, "trilha.ogg")
     #carregando o jogo
-    @jogador = Jogador.new(self, 100, 1650)
+    @jogador = Jogador.new(self, 100, 1650) 
     #carregando a chave
     @keyPlacar = Gosu::Image.new(self, "key.png", true)
     #texto da porcentagem
@@ -28,7 +28,7 @@ class SmartGuy < Gosu::Window
     @fonteCondicao = Gosu::Font.new(self, Gosu::default_font_name, 20)
 
     #texto dos menus
-    @fonte = Gosu::Font.new(self, "Broadway", 20)
+    @fonte = Gosu::Font.new(self, "happy hell", 20)
     #mensagem dos menus
     @msgInicio = Gosu::Image.from_text(self, "SMART GUY", "Broadway", 80)
     @msgPause = Gosu::Image.from_text(self, "PAUSE", "Broadway", 60)
@@ -56,8 +56,13 @@ public
   end
 
   def draw
-    @sky.draw(0,0,0)
-    if    @estado == "INICIO"  then draw_inicio
+    #@sky.draw(0,0,0)
+
+      if (@draw_negacao == true) then
+        draw_negacao
+      end
+
+      if    @estado == "INICIO"  then draw_inicio
       elsif @estado == "JOGANDO" then draw_jogando
       elsif @estado == "PAUSE" then draw_pause
       elsif @estado == "FIM" then draw_fim    
@@ -117,14 +122,16 @@ private
       @jogador.try_to_jump 
     end
 
-      @jogador.update(move_x)
+      @jogador.update(move_x, @placar)
       # adc +5 ao placar
       @placar += @jogador.collect_keys(@map.keys)
     
-      if (@jogador.enter_door(@map.doors) == false) then
-          draw_negacao
-        else
+      if (@jogador.enter_door(@map.doors) == 2) then
           @estado = "FIM"
+        elsif (@jogador.enter_door(@map.doors) == 1) then
+          @draw_negacao = true 
+        else 
+          @draw_negacao = false 
       end
 
     # camera segue o jogador
@@ -133,21 +140,14 @@ private
   end
 
   def draw_negacao 
-    @fonteCondicao.draw("Pegue mais chaves", 45, 50, 3, 1.0, 1.0, 0xffffffff) 
+    @fonteCondicao.draw("Pegue mais chaves", 45, 50, 50, 1.0, 1.0, 0xffffffff) 
   end
 
   def draw_jogando
-      @sky.draw 0, 0, 0        
+      @sky.draw -@camera_x, -@camera_y, 0        
       @keyPlacar.draw 25,10,1
       #desenhar placar
       @fonteIndidicador.draw("#{@placar}%", 80, 10, *@@formato)  
-
-      / if (@placar >= 100) then
-        @fonteCondicao.draw("Permitido", 45, 50, 3, 1.0, 1.0, 0xffffffff)         
-        else
-        @fonteCondicao.draw("N Permitidio", 45, 50, 3, 1.0, 1.0, 0xffffffff)        
-        #@condicao = "npermitido" 
-      end/
 
     # Faz com que tudo dentro do bloco seja desenhado deslocado
     translate(-@camera_x, -@camera_y) do
@@ -169,6 +169,4 @@ private
     x = self.width / 2 - @fonte.text_width(msg,1) / 2
     @fonte.draw(msg, x+5, self.height/1.8, *@@formato)
   end
-  
 end
-

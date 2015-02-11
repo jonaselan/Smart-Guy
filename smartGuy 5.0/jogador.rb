@@ -10,7 +10,7 @@ class Jogador
     @map = window.map
     # Carrega todas as imagens para animação
     @standing, @walk1, @walk2, @jump =
-      *Gosu::Image.load_tiles(window, "Jogador.png", 50, 50, false)
+      *Gosu::Image.load_tiles(window, "Jogador2.png", 50, 50, false)
     # @cur_image contem a imagem a ser desenhada.
     # A imagem é definida no método update e desenhada no draw
     @cur_image = @standing
@@ -41,7 +41,8 @@ class Jogador
       not @map.solid?(@x + offs_x, @y + offs_y - 45)
   end
 
-  def update(move_x)
+  def update(move_x, placar)
+    @placar = placar
     # Seleciona a imagem dependendo da ação
     if (move_x == 0)
       @cur_image = @standing
@@ -106,24 +107,24 @@ class Jogador
       if (keys[i].x - @x).abs < 50 and (keys[i].y - @y).abs < 50 then
         keys.delete(keys[i])
         @som_collect.play 
-        return 100
+        return 5
       end
     end  
     0    
   end
 
   def enter_door(doors)
-    if (@placar >= 100) then
-      for i in 0..doors.size-1 do
-        if (doors[i].x - @x).abs < 50 and (doors[i].y - @y).abs < 50
-          doors.delete(doors[i])
-          return true
+    for i in 0..doors.size-1 do
+      /puts "#{(doors[i].x - @x).abs} : #{(doors[i].y - @y).abs}"/
+      if ((doors[i].x - @x).abs < 50) and ((doors[i].y - @y).abs < 50) then
+        if (@placar >= 100) then
+          return 2 # chegou na porta e tem o numero total de chaves
         else
-          return false
+          return 1 # chegou na porta e tem o numero total de chaves
         end
-      end  
-    else
-          return false
-     end 
+      else
+        return 0 # nao chegou na porta
+        end
+     end  
   end
 end
