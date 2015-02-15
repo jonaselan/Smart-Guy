@@ -9,7 +9,7 @@ class Mapa
     # Load 60x60 tiles, 5px overlap in all four directions.
     # carrega imagens de 60x60, com 5 pixel de sobreposição 
     # nas quatro direções
-    @tileset = Gosu::Image.load_tiles(window, "terreno.png", 60, 60, true)
+    @tileset = Gosu::Image.load_tiles(window, "imagens/sprite.png", 60, 60, true)
     # 0 chao
     # 1 bolsa
     # 2 lampada
@@ -23,10 +23,10 @@ class Mapa
     # 10 porta
     # 11 quinas esquerda
     # 12 quinas direita
-    key_img = Gosu::Image.new(window, "key.png", false)
+    key_img = Gosu::Image.new(window, "imagens/key.png", false)
     @keys = []
 
-    door_img = Gosu::Image.new(window, "door.png", false)
+    door_img = Gosu::Image.new(window, "imagens/door.png", false)
     @doors = []
 
 

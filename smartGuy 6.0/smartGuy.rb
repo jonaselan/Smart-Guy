@@ -10,17 +10,17 @@ class SmartGuy < Gosu::Window
     super(640, 480, false)
     self.caption = "Smart Guy"
     #plano de fundo do jogo
-    @sky = Gosu::Image.new(self, "fundo.png", true)
+    @sky = Gosu::Image.new(self, "imagens/fundo.png", true)
     #plano de fundo da tela inicial e pause
-    @fundoMenus = Gosu::Image.new(self, "Space.png", true)
+    @fundoMenus = Gosu::Image.new(self, "imagens/Space.png", true)
     #carregando o mapa
     @map = Mapa.new(self, "Mapa.txt")
     #carregando a trilha sonora do jogo
-    @trilha = Gosu::Song.new(self, "trilha.ogg")
+    @trilha = Gosu::Song.new(self, "audios/trilha.ogg")
     #carregando o jogo
     @jogador = Jogador.new(self, 100, 1650) 
     #carregando a chave
-    @keyPlacar = Gosu::Image.new(self, "key.png", true)
+    @keyPlacar = Gosu::Image.new(self, "imagens/key.png", true)
     #texto da porcentagem
     @fonteIndidicador = Gosu::Font.new(self, Gosu::default_font_name, 40)
   
@@ -28,7 +28,7 @@ class SmartGuy < Gosu::Window
     @fonteCondicao = Gosu::Font.new(self, Gosu::default_font_name, 20)
 
     #texto dos menus
-    @fonte = Gosu::Font.new(self, "happy hell", 20)
+    @fonte = Gosu::Font.new(self, "Arial", 20)
     #mensagem dos menus
     @msgInicio = Gosu::Image.from_text(self, "SMART GUY", "Broadway", 80)
     @msgPause = Gosu::Image.from_text(self, "PAUSE", "Broadway", 60)
@@ -140,7 +140,7 @@ private
   end
 
   def draw_negacao 
-    @fonteCondicao.draw("Pegue mais chaves", 45, 50, 50, 1.0, 1.0, 0xffffffff) 
+    @fonteCondicao.draw("Colete mais chaves", 45, 50, 50, 1.0, 1.0, 0xffffffff) 
   end
 
   def draw_jogando

@@ -10,14 +10,14 @@ class Jogador
     @map = window.map
     # Carrega todas as imagens para animação
     @standing, @walk1, @walk2, @jump =
-      *Gosu::Image.load_tiles(window, "Jogador2.png", 50, 50, false)
+      *Gosu::Image.load_tiles(window, "imagens/Jogador.png", 50, 56, false)
     # @cur_image contem a imagem a ser desenhada.
     # A imagem é definida no método update e desenhada no draw
     @cur_image = @standing
     @placar = 0
 
-    @som_jump = Gosu::Sample.new(window, "jump.wav")
-    @som_collect = Gosu::Sample.new(window, "collect.wav")
+    @som_jump = Gosu::Sample.new(window, "audios/jump.wav")
+    @som_collect = Gosu::Sample.new(window, "audios/collect.wav")
     @condicao = false
   end
 
