@@ -1,0 +1,73 @@
+/*Agradeço a DEUS pelo dom do conhecimento*/
+table tfoot tr th{
+	background-color:#228B22;	
+}
+
+article{
+	text-align: center;
+}
+
+table{
+	width:100%;
+	/*Só funciona se não estive aplicado o border-collapse*/
+	border-spacing: 5px;
+	font-size: 18px;
+}
+
+table tr:nth-child(odd){
+	/*background-color: #E1E4D6;*/
+}
+
+table tr:nth-child(even){
+	background-color: #D3D3D3;
+}
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;	
+}
+th, td{
+	padding: 15px;
+}
+td{
+	text-align: center;
+}
+
+table thead tr th{
+	background-color: #6495ED;
+	color: white;
+}
+table tfoot tr th{
+	background-color:#fff;
+}
+/*
+.slideSow{
+	display: inline-block;
+	width: 400%;
+	height: 310px;
+	-webkit-animation: slider 32s infinite;
+	animation: slider 32s infinite;
+}
+.slideShow figure{
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.slideShow figure:after,
+.slideShow figure:before{
+	position: relative;
+	display: block;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	animation: figurer 32s infinite;
+	-webkit-animation: figurer 32s infinite;
+	
+	z-index: -10;
+}
+*/
+.foto{
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}

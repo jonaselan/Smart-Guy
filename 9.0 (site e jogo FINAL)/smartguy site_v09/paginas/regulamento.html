@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Agradeço a DEUS pelo dom do conhecimento -->
+<head>
+	<!--Metadados-->
+	<meta charset="utf-8" />
+	<meta name="description" content="Game desenvolvido em Ruby com auxilo do framework Gosu" />
+	<meta name="keywords" content="Game, Ruby, Gosu" />
+	<meta name="author" content="Jonas Elan e Eduardo Marçal">
+	
+	<link rel="stylesheet" type="text/css" href="../css/principal.css">
+	<link rel="stylesheet" type="text/css" href="../css/regulamento.css">
+
+	<!-- Mudar a linguagem -->
+	<script type="text/javascript">
+		if (navigator.language.toLowerCase() =="en-us"){
+			window.location ="../paginas_US/regulamento.html";
+		}
+	</script>
+	<title>Regulamento</title>
+
+</head>
+<body>
+	<!--	Plano de fundo	-->
+	<div id="plano_de_fundo"></div>		
+		<!-- Cabeçalho-->
+		<header>
+			<h1>SMART GUY!</h1>
+			<!--Botao de play e pause-->
+			<button id="play" class="fa fa-play" onclick="javascript: document.getElementById('music').play()"></button>
+			<button id="pause" class="fa fa-pause" onclick="javascript: document.getElementById('music').pause()"></button>
+			<audio id="music" controls>
+				<source src="../musica/trilhaAntiga.ogg" type="audio/ogg">
+				nao suportado
+			</audio>
+		</header>
+			<!-- Conteiner do site -->
+			<div id="corpo">
+			<!--Navegação-->
+			<nav> 
+				<ul>
+				<li><a href="../index_home.html">Inicio</a></li>
+				<li><a href="ranking.html">Ranking</a></li>
+				<li><a href="regulamento.html" id="selecionaRegulamento">Regulamentos</a></li>
+				<li><a href="desenvolvedores.html">Quem Somos</a></li>
+				<li><a href="contatos.html">Contatos</a></li>
+				</ul>
+			</nav>
+			<!-- Conteudo -->
+			<article>
+				<div class="box" id="info">
+						<h2>Informações técnicas</h2>
+						<span class="icones fa fa-gamepad"></span>
+						<p>Para que o jogar venha a executar é necessario a instalação do Ruby e o framework Gosu</p>
+					</div>
+					<div class="box" id="regra">
+						<h2>Regras</h2>
+						<span class="icones fa fa-arrow-circle-o-right"></span>
+						<p>regra do jogo, acrescentar o contexto</p>
+					</div>
+					<div class="box" id="download">
+						<h2>Download</h2>
+						<a class="link"href="https://github.com/jonaselan/smartGuy/archive/master.zip"/>
+						<span class="icones fa fa-file-archive-o"></span>
+						<p>Linux</p>
+						<strong>$ sudo apt-get install ruby</strong><br>
+						<strong>$ sudo gem install gosu</strong><br><br>
+						<p>Windows</p>
+						<strong><a href="http://rubyinstaller.org/">http://rubyinstaller.org/</a></strong><br><br>
+						<p>Gosu</p>
+						<strong><a href="hhttps://github.com/jlnr/gosu/wiki">https://github.com/jlnr/gosu/wiki</a></strong><br><br>
+						<p>Para mais informações acesse:</p>
+						<strong><a href="https://www.ruby-lang.org/pt/">https://www.ruby-lang.org/pt</a></strong><br>
+						<strong><a href="http://libgosu.org/">http://libgosu.org</a></strong>
+					</div>
+					<div class="box" id="jogar">
+						<h2>Como jogar</h2>
+						<span class="icones fa fa-angellist"></span>
+						<p>Colete todas as chaves e entre no seu apartamento, para isso utilize as teclas: </p>
+						<p><span class="tecla fa fa-arrow-left"></span>  Move o personagem para esquerda</p>
+						<p><span class="tecla fa fa-arrow-right"></span>  Move o personagem para direita</p>
+						<p><span class="tecla fa fa-arrow-up"></span>  Salto do personagem</p>
+					</div>
+			</article>
+			</div>
+	<!-- Rodape -->
+	<footer>
+		<p>Desenvolvido por Jonas Elan e Eduardo Marçal</p>
+		<!-- Efeito no Sprite-->
+		<div class="sprite"></div>
+		<ul>
+			<li><a href="https://twitter.com/DuduMarcal" class="fa-twitter"></a></li>
+			<li><a href="https://www.facebook.com/eduardo.marcal.techlife" class="fa-facebook"></a></li>
+			<li><a href="https://www.youtube.com/channel/UCXNduv3MVqCh1iO8VpeExIw" class="fa-youtube"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-github"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-dropbox"></a></li>
+		</ul>
+	</footer>
+</body>
+</html>

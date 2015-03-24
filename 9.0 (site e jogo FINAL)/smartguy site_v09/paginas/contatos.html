@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!-- Agradeço a DEUS pelo dom do conhecimento -->
+<html lang="pt-br">
+<head>
+	<!--Metadados-->
+	<meta charset="utf-8" />
+	<meta name="description" content="Game desenvolvido em Ruby com auxilo do framework Gosu" />
+	<meta name="keywords" content="Game, Ruby, Gosu" />
+	<meta name="author" content="Jonas Elan e Eduardo Marçal">
+	
+	<link rel="stylesheet" type="text/css" href="../css/principal.css">
+	<link rel="stylesheet" type="text/css" href="../css/contatos.css">
+	
+		<!-- Mudar a linguagem -->
+	<script type="text/javascript">
+		if (navigator.language.toLowerCase() =="en-us"){
+			window.location ="../paginas_US/contatos.html";
+		}
+	</script>
+
+	<title>Contatos</title>
+</head>
+<body>
+	<!--	Plano de fundo	-->
+	<div id="plano_de_fundo"></div>		
+		<!-- Cabeçalho-->
+		<header>
+			<h1>SMART GUY!</h1>
+			<!--Botao de play e pause-->
+			<button id="play" class="fa fa-play" onclick="javascript: document.getElementById('music').play()"></button>
+			<button id="pause" class="fa fa-pause" onclick="javascript: document.getElementById('music').pause()"></button>
+			<audio id="music" controls>
+				<source src="../musica/trilhaAntiga.ogg" type="audio/ogg">
+				nao suportado
+			</audio>
+		</header>
+			<!-- Conteiner do site -->
+			<div id="corpo">
+			<!--Navegação-->
+			<nav> 
+				<ul>
+				<li><a href="../index_home.html">Inicio</a></li>
+				<li><a href="ranking.html">Ranking</a></li>
+				<li><a href="regulamento.html">Regulamentos</a></li>
+				<li><a href="desenvolvedores.html">Quem Somos</a></li>
+				<li><a href="contatos.html" id="selecionaContato">Contatos</a></li>
+				</ul>
+			</nav>
+			<!-- Conteudo -->
+			<article>
+				<div class="formulario">
+					<div id="tituloPagina">
+						<h2>Contatos</h2>
+					</div>
+				<form>
+					<label class="fa fa-user"></label>
+					<input type="text" placeholder="Nome" title="Nome completo" required><br>
+					<label class="fa fa-phone"></label>
+					<input type="tel" placeholder="Telefone"required pattern="^\(d{2}\)[\s]\d{4}-\d{4}$" title="(00) 0000-0000"><br>
+					<label class="fa fa-envelope-o"></label>
+					<input type="email" placeholder="Email"required title="endereço@dominio.com"><br>
+					<textarea placeholder="Fale conosco!" rows="8"></textarea><br>
+					<input type="submit" value="Enviar"/>
+				</form>
+				</div>
+			</article>
+		</div>
+	<!-- Rodape -->
+	<footer>
+		<p>Desenvolvido por Jonas Elan e Eduardo Marçal</p>
+		<!-- Efeito no Sprite-->
+		<div class="sprite"></div>
+		<ul>
+			<li><a href="https://twitter.com/DuduMarcal" class="fa-twitter"></a></li>
+			<li><a href="https://www.facebook.com/eduardo.marcal.techlife" class="fa-facebook"></a></li>
+			<li><a href="https://www.youtube.com/channel/UCXNduv3MVqCh1iO8VpeExIw" class="fa-youtube"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-github"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-dropbox"></a></li>
+		</ul>
+	</footer>
+</body>
+</html>

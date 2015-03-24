@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!-- Agradeço a DEUS pelo dom do conhecimento -->
+<html lang="pt-br">
+<head>
+	<!--Metadados-->
+	<meta charset="utf-8" />
+	<meta name="description" content="Game desenvolvido em Ruby com auxilo do framework Gosu" />
+	<meta name="keywords" content="Game, Ruby, Gosu" />
+	<meta name="author" content="Jonas Elan e Eduardo Marçal">
+	
+	<!-- Estilo -->
+	<link rel="stylesheet" type="text/css" href="css/principal.css">
+
+	<!-- Mudar a linguagem -->
+	<script type="text/javascript">
+		if (navigator.language.toLowerCase() =="en-us"){
+			window.location ="paginas_US/index.html";
+		}
+	</script>
+
+	<title>Smart Guy</title>
+</head>
+<body>
+	<!--	Plano de fundo	-->
+	<div id="plano_de_fundo"></div>	
+
+		<!-- Cabeçalho-->
+		<header>
+			<h1>SMART GUY!</h1>
+			<!--Botao de play e pause-->
+			<button id="play" class="fa fa-play" onclick="javascript: document.getElementById('music').play()"></button>
+			<button id="pause" class="fa fa-pause" onclick="javascript: document.getElementById('music').pause()"></button>
+			<audio id="music" controls>
+			<source src="musica/trilhaAntiga.ogg" type="audio/ogg">
+			nao suportado
+			</audio>
+		</header>
+			<!-- Conteiner do site -->
+			<div id="corpo">
+			<!--Navegação-->
+			<nav> 
+				<ul>
+				<li><a href="index_home.html" id="selecionaHome">Inicio</a></li>
+				<li><a href="paginas/ranking.html">Ranking</a></li>
+				<li><a href="paginas/regulamento.html">Regulamentos</a></li>
+				<li><a href="paginas/desenvolvedores.html">Quem Somos</a></li>
+				<li><a href="paginas/contatos.html">Contatos</a></li>
+				</ul>
+			</nav>
+			<!-- Conteudo -->
+			<article>
+				<div id="top">
+					<h2>Conheça o game</h2>
+					<p>Colete todas as chaves e consiga entrar em seu apartamento!</p>
+				</div>
+				<br/><br/>
+				<!--<hr/>-->
+				<br/>
+				<div id="gamePlay"> 
+					<h3> Gameplay </h3>
+					<iframe width="450" height="300" src="https://www.youtube.com/embed/jJhbpY70miE" allowfullscreen></iframe>
+				</div>
+
+				<div id="desenvolvimento">
+					<h3>Desenvolvimento do game</h3>
+					<figure>
+						<img src="imagens/game0.png" alt="game">
+						<img src="imagens/game1.png" alt="game">
+						<img src="imagens/game2.png" alt="game">
+						<img src="imagens/game3.png" alt="game">
+						<img src="imagens/desenv.jpg" alt="game">
+						<img src="imagens/faseDesenvolvimento.jpg" alt="desenvolvimento">
+					</figure>
+					<!--<img src="imagens/desenv.jpg" alt="game" class="efeito">-->
+				</div>
+				<div id="historia">
+					<h3>Sobre o jogo</h3>
+					<p>Smart Guy é um jogo desenvolvido pelos alunos Jonas Elan e Eduardo Marçal. O game foi desenvolvido na linguagem Ruby, que foi trabalhada durante todo o primeiro trimestre em sala de aula, com o auxilio do framework Gosu.
+					O enredo conta a história de um rapaz que deseja entrar em seu apartamento, para tanto, deve coletar todas as chaves espalhadas em seu caminho.
+					Boa parte do game já foi desenvolvida como os sprintes, os cenários, trilha sonora, personagens e a física. A seguir serão mostrados alguns desses elementos, ainda em desenvolvimento. </p>
+				</div>
+				<div id="objetivo">
+					<h3>Objetivos</h3>
+					<ul>
+						<li>projetar e implementar técnicas de jogos para computadores;</li>
+						<li>praticar o conteúdo dado em sala de aula;</li>
+						<li>completar a última nota da disciplina de Programação de Computadores;</li>
+						<li>experiência de trabalho em equipe, que é fundamental na área em questão;</li>
+						<li>interdisciplinaridade entre as disciplinas de Português e Web Design, respectivamente, com a construção de um relatório e do site referente ao game.</li>
+					</ul>
+				</div>
+				<div id="popup">
+				<form>
+				<label>Cadastre-se e receba em seu e-mail as novidades</label><br><br>
+					<input type="text" placeholder="Nome" title="Nome completo" required>
+					<input type="email" placeholder="Email"required title="endereço@dominio.com">
+					<input type="submit" value="Enviar" onclick="alert('Enviado com sucesso!')" /><br><br>
+				</form>
+			</div>
+			</article>
+	</div>
+	<!-- Rodape -->
+	<footer>
+		<p>Desenvolvido por Jonas Elan e Eduardo Marçal</p>
+		
+		<!-- Efeito no Sprite-->
+		<div class="sprite"></div>
+
+		<ul>
+			<li><a href="https://twitter.com/DuduMarcal" class="fa-twitter"></a></li>
+			<li><a href="https://www.facebook.com/eduardo.marcal.techlife" class="fa-facebook"></a></li>
+			<li><a href="https://www.youtube.com/channel/UCXNduv3MVqCh1iO8VpeExIw" class="fa-youtube"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-github"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-dropbox"></a></li>
+		</ul>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/*Agradeço a DEUS pelo dom do conhecimento*/
+
+*{
+	color: white;
+}
+
+article{
+	background-color: transparent;
+	margin: 0 auto;
+	min-height: 750px;
+
+}
+.box{
+	text-align: center;
+	min-width: 140px;
+	width: 45%;
+	padding: 10px;
+	margin: 15px auto;
+	top: 0px;
+}
+
+.box h2 {
+	font-size: 1.8em;
+	background: #7B68EE;
+}
+
+.box p {
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.1em;
+	padding: 5px;
+}
+
+.link{
+	text-decoration: none;
+}
+.icones{
+	padding: 20px;
+	width: 50px;
+	font-size: 50px;
+
+}
+#info{
+	float: left; 
+	background-color: #6495ED;
+}
+#info h2{
+	background-color: #4169E1;
+}
+
+#info, #regra{
+	min-height: 222px;
+}
+#regra{
+	float: right;
+	background-color: #3CB371;
+}
+#regra h2{
+	background-color: #2E8B57;
+}
+
+#regra p{
+	padding-top: 18px;
+
+}
+
+#download{
+	float: left;
+	background-color: #F08080;
+}
+
+#download h2{
+	background-color: #CD5C5C;
+}
+#download strong, p{
+	/*Pergunta a professora porque disto */
+	cursor: default;
+}
+#regra, #jogar, #info, #download a{
+	text-decoration: none;
+	/* a definir
+	color: #F08080;
+	*/
+}
+
+#jogar{
+	float: right;
+	background-color: #FF8C00;
+}
+
+#jogar h2{
+	background-color: #FF4500;
+}
+
+#jogar p{
+	padding-top: 30px;
+	text-align: left;
+	text-transform: inherit;
+}
+
+#download, #jogar{
+	min-height: 435px;
+}
+footer{
+	clear: all;
+	text-decoration: none;
+}
+footer p{
+	color: white;
+	font-size: 20px;
+}

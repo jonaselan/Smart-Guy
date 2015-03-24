@@ -1,5 +1,0 @@
-gameplay 	desenvolvimento
-
-nas caixas:
-	divertido
-	intuitivo

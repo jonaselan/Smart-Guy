@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<!-- Agradeço a DEUS pelo dom do conhecimento -->
+<head>
+	<!--Metadados-->
+	<meta charset="utf-8" />
+	<meta name="description" content="Game developed in Ruby with the framework auxilo Gosu" />
+	<meta name="keywords" content="Game, Ruby, Gosu" />
+	<meta name="author" content="Jonas Elan and Eduardo Marçal">
+		
+	<link rel="stylesheet" type="text/css" href="../css/principal.css">
+	<link rel="stylesheet" type="text/css" href="../css/ranking.css">
+
+		<!-- Mudar a linguagem -->
+	<script type="text/javascript">
+		if (navigator.language.toLowerCase() !="en-us"){
+			window.location ="../paginas/ranking.html";
+		}
+	</script>
+
+	<title>Ranking</title>
+</head>
+<body>
+	<!--	Plano de fundo	-->
+	<div id="plano_de_fundo"></div>		
+		<!-- Cabeçalho-->
+		<header>
+			<h1>SMART GUY!</h1>
+			<!--Botao de play e pause-->
+			<button id="play" class="fa fa-play" onclick="javascript: document.getElementById('music').play()"></button>
+			<button id="pause" class="fa fa-pause" onclick="javascript: document.getElementById('music').pause()"></button>
+			<audio id="music" controls>
+				<source src="../musica/trilhaAntiga.ogg" type="audio/ogg">
+				not supported
+			</audio>
+		</header>
+		<!-- Conteiner do site -->
+			<div id="corpo">
+			<!--Navegação-->
+			<nav> 
+				<ul>
+				<li><a href="../index_home.html">Home</a></li>
+				<li><a href="ranking.html" id="selecionaRanking">Ranking</a></li>
+				<li><a href="regulamento.html">Regulations</a></li>
+				<li><a href="desenvolvedores.html">About Us</a></li>
+				<li><a href="contatos.html">Contacts</a></li>
+				</ul>
+			</nav>
+			<!-- Conteudo -->
+			<article>
+				<div id="top">
+					<h2> Ranking </h2>
+					<br/> <br/><hr/><br/>
+				</div>
+
+				<script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","informacao.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+document.write("<table><tr><th>Classification</th><th>Name</th><th>Time</th></tr>");
+var x=xmlDoc.getElementsByTagName("jogador");
+for (i=0;i<x.length;i++)
+  { 
+  document.write("<tr><td>");
+  document.write(i+1);
+  document.write("</td>");
+  document.write("<td>");
+  document.write(x[i].getElementsByTagName("nome")[0].childNodes[0].nodeValue);
+  document.write("</td>");
+  document.write("<td>");
+  document.write(x[i].getElementsByTagName("tempo")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+  document.write("<tr><th colspan='3'>Updated data in 23.03.15</th></tr>");
+  document.write("</table>");
+</script>
+			</article>
+		</div>
+	<!-- Rodape -->
+	<footer>
+		<p>Developed by Jonas Elan and Eduardo Marçal</p>
+		<!-- Efeito no Sprite-->
+		<div class="sprite"></div>
+		<ul>
+			<li><a href="https://twitter.com/DuduMarcal" class="fa-twitter"></a></li>
+			<li><a href="https://www.facebook.com/eduardo.marcal.techlife" class="fa-facebook"></a></li>
+			<li><a href="https://www.youtube.com/channel/UCXNduv3MVqCh1iO8VpeExIw" class="fa-youtube"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-github"></a></li>
+			<li><a href="https://github.com/eduardomarcal" class="fa-dropbox"></a></li>
+		</ul>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*Agradeço a DEUS pelo dom do conhecimento*/
+article{
+	min-height: 650px;
+}
+
+.nome h3 {
+	font-weight: 400;
+	font-size: 2.8em;
+	color: #323232;
+	
+}
+
+.nome h4 {
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 0.80em;
+	color: #6F6F6F;
+	padding-top:: 20px;
+	padding-bottom: 20px;: 
+	
+}
+
+
+.botao {
+	width: 50%;
+	display: inline-block;
+	padding: 1.3em 3em;
+	background: #8dc63f;
+	letter-spacing: 0.20em;
+	text-decoration: none;
+	font-weight: 600;
+	color: #FFF;
+}
+
+.botao:hover {
+	background: #86bd3b;
+}
+
+.circulo{
+	display: inline-block;
+	margin-bottom: 1em;
+	margin: 0 auto;
+	width: 3em;
+	height: 3em;
+	line-height: 3em;
+	font-size: 4em;
+	color: #8dc63f;
+	border: 2.5px solid #86bd3b;
+	border-radius: 50%;
+}
+img {
+
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+}
+
+#box1, #box2{
+	display:inline-block;
+	text-align: center;
+	padding: 20px;
+	width: 44%;
+	min-width: 300px;
+	
+	
+}
+
+#box1 p, #box2 p{
+	text-align: justify;
+	color: black;
+	padding: 20px;
+}
